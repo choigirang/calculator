@@ -1,0 +1,240 @@
+*{
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+    list-style: none;
+    text-decoration: none;
+    font-family: 'Tourney', cursive;
+    
+}
+
+body{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    width: 100vw;
+    height: 100vh;
+    /* background-image: url(img/bg.jpg); */
+    background-color: black;
+    background-position: center;
+    overflow: hidden;
+    position: relative;
+}
+
+h1{
+    color: white;
+    font-size: 2rem;
+    position: fixed;
+    top: 5%;
+    text-align: center;
+    width: 18rem;
+    overflow: hidden;
+    text-shadow: 0 0 10px white;
+    animation: neon 3s ease infinite;
+}
+
+@keyframes neon{
+    0%{text-shadow: 0 0 0px white;}
+    50%{text-shadow: 0 0 10px white;}
+    100%{text-shadow: 0 0 0px white;}
+}
+
+.container{
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    align-items: center;
+    width: 25%;
+    min-width: 25rem;
+    height: 70%;
+    min-height: 40rem;
+    position: relative;
+    background: linear-gradient(-45deg, #0F2027,#203A43,#2C5364);
+    background-position: 400% 400%;
+    animation: AnimationName 15s ease infinite;
+    overflow: hidden;
+}
+
+@-webkit-keyframes AnimationName {
+    0%{background-position:0% 50%}
+    50%{background-position:100% 50%}
+    100%{background-position:0% 50%}
+}
+@-moz-keyframes AnimationName {
+    0%{background-position:0% 50%}
+    50%{background-position:100% 50%}
+    100%{background-position:0% 50%}
+}
+@-o-keyframes AnimationName {
+    0%{background-position:0% 50%}
+    50%{background-position:100% 50%}
+    100%{background-position:0% 50%}
+}
+@keyframes AnimationName { 
+    0%{background-position:0% 50%}
+    50%{background-position:100% 50%}
+    100%{background-position:0% 50%}
+}
+
+
+.container > span:nth-child(1){
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 0.2rem;
+    background-color: black;
+    animation: animate1 2s linear infinite;
+    filter: blur(2px);
+}
+
+.container > span:nth-child(2){
+    position: absolute;
+    top: 0;
+    right: 0;
+    width: 0.2rem;
+    height: 100%;
+    background-color: black;
+    animation: animate2 2s linear infinite;
+    filter: blur(2px);
+}
+
+.container > span:nth-child(3){
+    position: absolute;
+    bottom: 0;
+    right: 0;
+    width: 100%;
+    height: 0.2rem;
+    background-color: black;
+    animation: animate3 2s linear infinite;
+    filter: blur(2px);
+}
+
+.container > span:nth-child(4){
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 0.2rem;
+    height: 100%;
+    background-color: black;
+    animation: animate4 2s linear infinite;
+    filter: blur(2px);
+}
+
+@keyframes animate1{
+    0%{
+        left: -100%;
+    }
+    50%,100%{
+        left: 100%;
+    }
+}
+
+@keyframes animate2{
+    0%{
+        top: -100%;
+    }
+    50%,100%{
+        top: 100%;
+    }
+}
+
+@keyframes animate3{
+    0%{
+        right: -100%;
+    }
+    50%,100%{
+        right: 100%;
+    }
+}
+
+@keyframes animate4{
+    0%{
+        bottom: -100%;
+    }
+    50%,100%{
+        bottom: 100%;
+    }
+}
+
+
+/* display */
+.display{
+    display: flex;
+    flex-direction: column;
+    justify-content: end;
+    align-items: center;
+    width: 90%;
+    height: 30%;
+    background-color: #09191f;
+    box-shadow: -1px 0 10px black inset;
+    border-radius: 7px;
+    color: white;
+    font-weight: bolder;
+    font-size: 3rem;
+    color: #1d4c5e;
+}
+
+.display div{
+    width: 95%;
+    text-align: right;
+}
+
+.inputNum{
+    color: #92c6da;
+    font-size: 4rem;
+}
+
+/* button */
+.buttonBox{
+    width: 90%;
+    height: 60%;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: center;
+    margin-top: -5%;
+}
+
+div.row{
+    display: flex;
+    height: 20%;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+    width: 100%;
+}
+
+button{
+    color: white;
+    font-size: 1.5rem;
+    flex-basis: 24%;
+    height: 95%;
+    border-radius: 5px;
+    background-color: #1f4037;
+    border: none;
+    box-shadow: -1px 0 10px #0F2027 inset;
+    cursor: pointer;
+    font-weight: bolder;
+}
+
+button:hover{
+    background: #09191f !important;
+}
+
+button:active{
+    box-shadow: -3px -3px 20px black inset;
+}
+
+div.top button{
+    background-color: #093637;
+}
+
+div.row button:last-child{
+    background-color: #093637;
+    font-size: 2rem;
+}
+
+button.doubleWidth{
+    flex-basis: 50%;
+}
